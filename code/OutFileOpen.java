@@ -44,7 +44,7 @@ public class OutFileOpen extends JDialog {
 		setResizable(false);
 		
 		JLabel label = new JLabel("\u4FDD\u5B58\u8DEF\u5F84");
-		label.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		label.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label.setBackground(new Color(255, 255, 255));
 		label.setBounds(20, 30, 48, 15);
 		contentPane.add(label);
@@ -52,7 +52,7 @@ public class OutFileOpen extends JDialog {
 		textField = new JTextField();
 		textField.setForeground(Color.GRAY);
 		textField.setText("\u70B9\u51FB\u6D4F\u89C8\u6309\u94AE\uFF0C\u9009\u62E9\u76EE\u5F55");
-		textField.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		textField.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		textField.setEditable(false);
 		textField.setBounds(78, 27, 250, 21);
 		contentPane.add(textField);
@@ -61,7 +61,7 @@ public class OutFileOpen extends JDialog {
 		JButton applybutton = new JButton("\u5BFC\u51FA");
 		applybutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*±£´æ²Ù×÷*/
+				/*ä¿å­˜æ“ä½œ*/
 				BufferedWriter bw = null;
 				try {
 					bw = new BufferedWriter(new FileWriter(selectedFile,true));
@@ -85,11 +85,11 @@ public class OutFileOpen extends JDialog {
 				} catch (IOException e1) {
 					e1.printStackTrace();
 				}
-				JOptionPane.showMessageDialog(null, "±£´æ³É¹¦!");
+				JOptionPane.showMessageDialog(null, "ä¿å­˜æˆåŠŸ!");
 				dispose();
 			}
 		});
-		applybutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		applybutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		applybutton.setEnabled(false);
 		applybutton.setBackground(new Color(204, 255, 204));
 		applybutton.setBounds(273, 82, 65, 23);
@@ -101,39 +101,39 @@ public class OutFileOpen extends JDialog {
 				dispose();
 			}
 		});
-		cancelbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		cancelbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		cancelbutton.setBackground(new Color(255, 204, 204));
 		cancelbutton.setBounds(348, 82, 65, 23);
 		contentPane.add(cancelbutton);
 		
 		JFileChooser fileChooser = new JFileChooser();
-		FileFilter filter = new FileNameExtensionFilter("Êı¾İ´æ´¢ÎÄ¼ş(.txt)","txt");
+		FileFilter filter = new FileNameExtensionFilter("æ•°æ®å­˜å‚¨æ–‡ä»¶(.txt)","txt");
 		fileChooser.setFileFilter(filter);
 		
 		JButton filebutton = new JButton("\u6D4F\u89C8...");
 		filebutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*ä¯ÀÀ²Ù×÷*/
+				/*æµè§ˆæ“ä½œ*/
 				int i = fileChooser.showSaveDialog(getContentPane());
 				if (i == JFileChooser.APPROVE_OPTION) {
-					selectedFile = fileChooser.getSelectedFile();                 //ÎÄ¼şĞÍ±äÁ¿
-					String fname = selectedFile.getName();                        //»ñÈ¡ÎÄ¼şÃû
-					if(fname.indexOf(".txt")==-1){                                //×Ô¶¯À©Õ¹Ãû
-						textField.setText(selectedFile.getPath() + ".txt");       //ÎÄ¼şÂ·¾¶
+					selectedFile = fileChooser.getSelectedFile();                 //æ–‡ä»¶å‹å˜é‡
+					String fname = selectedFile.getName();                        //è·å–æ–‡ä»¶å
+					if(fname.indexOf(".txt")==-1){                                //è‡ªåŠ¨æ‰©å±•å
+						textField.setText(selectedFile.getPath() + ".txt");       //æ–‡ä»¶è·¯å¾„
 						selectedFile=new File(fileChooser.getCurrentDirectory(),fname+".txt");
 					}else {
-						textField.setText(selectedFile.getPath());                //ÎÄ¼şÂ·¾¶
+						textField.setText(selectedFile.getPath());                //æ–‡ä»¶è·¯å¾„
 					}
 					applybutton.setEnabled(true);
 				}
 				else {
 					selectedFile = null;
-					textField.setText("µã»÷ä¯ÀÀ°´Å¥£¬Ñ¡ÔñÄ¿Â¼");
+					textField.setText("ç‚¹å‡»æµè§ˆæŒ‰é’®ï¼Œé€‰æ‹©ç›®å½•");
 					applybutton.setEnabled(false);
 				}
 			}
 		});
-		filebutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		filebutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		filebutton.setBackground(new Color(255, 255, 255));
 		filebutton.setBounds(338, 26, 75, 23);
 		contentPane.add(filebutton);
