@@ -1,4 +1,4 @@
-package store;
+package code;
 
 import javax.swing.JPanel;
 import javax.swing.JRootPane;
