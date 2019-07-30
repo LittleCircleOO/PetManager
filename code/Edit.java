@@ -25,8 +25,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.SpinnerNumberModel;
 
 public class Edit extends JDialog {
-	public static String type[]= {"<·ÇÄÚÖÃ>","Ã¨","¹·","ÍÃ×Ó","²ÖÊó","ÆäËû..."};
-	public static String color[]= {"<·ÇÄÚÖÃ>","°×É«","ºÚÉ«","ºìÉ«","³ÈÉ«","»ÆÉ«","ÂÌÉ«","ÇàÉ«","À¶É«","×ÏÉ«","×ØÉ«","»ÒÉ«","·ÛÉ«","ÆäËû..."};
+	public static String type[]= {"<éå†…ç½®>","çŒ«","ç‹—","å…”å­","ä»“é¼ ","å…¶ä»–..."};
+	public static String color[]= {"<éå†…ç½®>","ç™½è‰²","é»‘è‰²","çº¢è‰²","æ©™è‰²","é»„è‰²","ç»¿è‰²","é’è‰²","è“è‰²","ç´«è‰²","æ£•è‰²","ç°è‰²","ç²‰è‰²","å…¶ä»–..."};
 	private JPanel contentPane;
 	private JTextField nametext;
 
@@ -42,26 +42,26 @@ public class Edit extends JDialog {
 		contentPane.setLayout(null);
 		
 		JLabel typelabel = new JLabel("\u79CD\u7C7B");
-		typelabel.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		typelabel.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		typelabel.setBounds(203, 28, 24, 18);
 		contentPane.add(typelabel);
 		
 		JComboBox typeBox = new JComboBox(type);
-		if(!Gui.db.data[line][0].equals("Ã¨")&&!Gui.db.data[line][0].equals("¹·")&&!Gui.db.data[line][0].contentEquals("ÍÃ×Ó")&&!Gui.db.data[line][0].contentEquals("²ÖÊó"))
+		if(!Gui.db.data[line][0].equals("çŒ«")&&!Gui.db.data[line][0].equals("ç‹—")&&!Gui.db.data[line][0].contentEquals("å…”å­")&&!Gui.db.data[line][0].contentEquals("ä»“é¼ "))
 			typeBox.addItem(Gui.db.data[line][0]);
 		typeBox.setSelectedItem(Gui.db.data[line][0]);
-		typeBox.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		typeBox.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		typeBox.setBackground(new Color(255, 255, 255));
 		typeBox.setBounds(237, 27, 92, 21);
 		contentPane.add(typeBox);
 		
 		JLabel namelabel = new JLabel("\u540D\u5B57");
-		namelabel.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		namelabel.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		namelabel.setBounds(25, 28, 24, 18);
 		contentPane.add(namelabel);
 		
 		nametext = new JTextField();
-		nametext.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		nametext.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		nametext.setText(Gui.db.data[line][1]);
 		nametext.setBackground(new Color(255, 255, 255));
 		nametext.setBounds(59, 26, 92, 21);
@@ -69,40 +69,40 @@ public class Edit extends JDialog {
 		nametext.setColumns(10);
 		
 		JLabel colorlabel = new JLabel("\u989C\u8272");
-		colorlabel.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		colorlabel.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		colorlabel.setBounds(25, 84, 24, 18);
 		contentPane.add(colorlabel);
 		
 		JComboBox colorBox = new JComboBox(color);
-		if(!Gui.db.data[line][2].equals("°×É«")&&!Gui.db.data[line][2].equals("ºÚÉ«")&&!Gui.db.data[line][2].equals("ºìÉ«")&&!Gui.db.data[line][2].equals("³ÈÉ«")&&!Gui.db.data[line][2].equals("»ÆÉ«")&&!Gui.db.data[line][2].equals("ÂÌÉ«")&&!Gui.db.data[line][2].equals("ÇàÉ«")&&!Gui.db.data[line][2].equals("À¶É«")&&!Gui.db.data[line][2].equals("×ÏÉ«")&&!Gui.db.data[line][2].equals("×ØÉ«")&&!Gui.db.data[line][2].equals("»ÒÉ«")&&!Gui.db.data[line][2].equals("·ÛÉ«"))
+		if(!Gui.db.data[line][2].equals("ç™½è‰²")&&!Gui.db.data[line][2].equals("é»‘è‰²")&&!Gui.db.data[line][2].equals("çº¢è‰²")&&!Gui.db.data[line][2].equals("æ©™è‰²")&&!Gui.db.data[line][2].equals("é»„è‰²")&&!Gui.db.data[line][2].equals("ç»¿è‰²")&&!Gui.db.data[line][2].equals("é’è‰²")&&!Gui.db.data[line][2].equals("è“è‰²")&&!Gui.db.data[line][2].equals("ç´«è‰²")&&!Gui.db.data[line][2].equals("æ£•è‰²")&&!Gui.db.data[line][2].equals("ç°è‰²")&&!Gui.db.data[line][2].equals("ç²‰è‰²"))
 			colorBox.addItem(Gui.db.data[line][2]);
 		colorBox.setSelectedItem(Gui.db.data[line][2]);
-		colorBox.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		colorBox.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		colorBox.setBackground(new Color(255, 255, 255));
 		colorBox.setBounds(59, 83, 92, 21);
 		contentPane.add(colorBox);
 		
 		JLabel agelabel = new JLabel("\u5E74\u9F84");
-		agelabel.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		agelabel.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		agelabel.setBounds(203, 84, 24, 18);
 		contentPane.add(agelabel);
 		
 		JSpinner agespinner = new JSpinner();
 		agespinner.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
 		agespinner.setBackground(new Color(255, 255, 255));
-		agespinner.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		agespinner.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		agespinner.setValue(Integer.decode(Gui.db.data[line][3]));
 		agespinner.setBounds(237, 83, 92, 22);
 		contentPane.add(agespinner);
 		
-		JButton addbutton = new JButton("ĞŞ¸Ä");
+		JButton addbutton = new JButton("ä¿®æ”¹");
 		addbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Gui.db.data[line][0]=(String) typeBox.getSelectedItem();
 				Gui.db.data[line][1]=nametext.getText();
 				Gui.db.data[line][2]=(String) colorBox.getSelectedItem();
 				Gui.db.data[line][3]=String.valueOf(agespinner.getValue());
-				JOptionPane.showMessageDialog(null, "Ìí¼Ó³É¹¦!");
+				JOptionPane.showMessageDialog(null, "æ·»åŠ æˆåŠŸ!");
 				//System.out.println(Gui.db.data[0][0] + " " + Gui.db.data[0][1] + " " + Gui.db.data[0][2] + " " + Gui.db.data[0][3]);
 				gui.pettable.setModel(new DefaultTableModel(
 						Gui.db.data,
@@ -121,7 +121,7 @@ public class Edit extends JDialog {
 			}
 		});
 		addbutton.setBackground(new Color(204, 255, 204));
-		addbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		addbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		addbutton.setBounds(212, 138, 61, 23);
 		addbutton.setEnabled(false);
 		contentPane.add(addbutton);
@@ -133,12 +133,12 @@ public class Edit extends JDialog {
 			}
 		});
 		cancelbutton.setBackground(new Color(255, 204, 204));
-		cancelbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		cancelbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		cancelbutton.setBounds(283, 138, 61, 23);
 		contentPane.add(cancelbutton);
 
-		JLabel tip = new JLabel("ÄúÎ´ĞŞ¸Ä³èÎïĞÅÏ¢");
-		tip.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel tip = new JLabel("æ‚¨æœªä¿®æ”¹å® ç‰©ä¿¡æ¯");
+		tip.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		tip.setForeground(Color.LIGHT_GRAY);
 		tip.setBackground(Color.WHITE);
 		tip.setBounds(25, 142, 126, 15);
@@ -146,67 +146,67 @@ public class Edit extends JDialog {
 		
 		nametext.getDocument().addDocumentListener(new DocumentListener(){
 			public void changedUpdate(DocumentEvent arg0) {
-				if(colorBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||typeBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
+				if(colorBox.getSelectedItem()=="<éå†…ç½®>"||typeBox.getSelectedItem()=="<éå†…ç½®>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
 					addbutton.setEnabled(false);
-					tip.setText("ÎÄ±¾¿ò²»ÄÜÎª¿Õ!");
+					tip.setText("æ–‡æœ¬æ¡†ä¸èƒ½ä¸ºç©º!");
 				}
 				else {
 					addbutton.setEnabled(true);
-					tip.setText("µã»÷ĞŞ¸Ä°´Å¥±£´æĞŞ¸Ä");
+					tip.setText("ç‚¹å‡»ä¿®æ”¹æŒ‰é’®ä¿å­˜ä¿®æ”¹");
 				}
 			}
 			public void insertUpdate(DocumentEvent arg0) {
-				if(colorBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||typeBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
+				if(colorBox.getSelectedItem()=="<éå†…ç½®>"||typeBox.getSelectedItem()=="<éå†…ç½®>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
 					addbutton.setEnabled(false);
-					tip.setText("ÎÄ±¾¿ò²»ÄÜÎª¿Õ!");
+					tip.setText("æ–‡æœ¬æ¡†ä¸èƒ½ä¸ºç©º!");
 				}
 				else {
 					addbutton.setEnabled(true);
-					tip.setText("µã»÷ĞŞ¸Ä°´Å¥±£´æĞŞ¸Ä");
+					tip.setText("ç‚¹å‡»ä¿®æ”¹æŒ‰é’®ä¿å­˜ä¿®æ”¹");
 				}
 			}
 			public void removeUpdate(DocumentEvent arg0) {
-				if(colorBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||typeBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
+				if(colorBox.getSelectedItem()=="<éå†…ç½®>"||typeBox.getSelectedItem()=="<éå†…ç½®>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
 					addbutton.setEnabled(false);
-					tip.setText("ÎÄ±¾¿ò²»ÄÜÎª¿Õ!");
+					tip.setText("æ–‡æœ¬æ¡†ä¸èƒ½ä¸ºç©º!");
 				}
 				else {
 					addbutton.setEnabled(true);
-					tip.setText("µã»÷ĞŞ¸Ä°´Å¥±£´æĞŞ¸Ä");
+					tip.setText("ç‚¹å‡»ä¿®æ”¹æŒ‰é’®ä¿å­˜ä¿®æ”¹");
 				}
 			}
 		});
 		
 		typeBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(typeBox.getSelectedItem()=="ÆäËû...")
+				if(typeBox.getSelectedItem()=="å…¶ä»–...")
 					typeBox.setEditable(true);
 				else
 					typeBox.setEditable(false);
-				if(colorBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||typeBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
+				if(colorBox.getSelectedItem()=="<éå†…ç½®>"||typeBox.getSelectedItem()=="<éå†…ç½®>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
 					addbutton.setEnabled(false);
-					tip.setText("ÎÄ±¾¿ò²»ÄÜÎª¿Õ!");
+					tip.setText("æ–‡æœ¬æ¡†ä¸èƒ½ä¸ºç©º!");
 				}
 				else {
 					addbutton.setEnabled(true);
-					tip.setText("µã»÷ĞŞ¸Ä°´Å¥±£´æĞŞ¸Ä");
+					tip.setText("ç‚¹å‡»ä¿®æ”¹æŒ‰é’®ä¿å­˜ä¿®æ”¹");
 				}
 			}
 		});
 		
 		colorBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(colorBox.getSelectedItem()=="ÆäËû...")
+				if(colorBox.getSelectedItem()=="å…¶ä»–...")
 					colorBox.setEditable(true);
 				else
 					colorBox.setEditable(false);
-				if(colorBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||typeBox.getSelectedItem()=="<·ÇÄÚÖÃ>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
+				if(colorBox.getSelectedItem()=="<éå†…ç½®>"||typeBox.getSelectedItem()=="<éå†…ç½®>"||nametext.getText().length()==0||colorBox.getSelectedItem().toString().length()==0||typeBox.getSelectedItem().toString().length()==0) {
 					addbutton.setEnabled(false);
-					tip.setText("ÎÄ±¾¿ò²»ÄÜÎª¿Õ!");
+					tip.setText("æ–‡æœ¬æ¡†ä¸èƒ½ä¸ºç©º!");
 				}
 				else {
 					addbutton.setEnabled(true);
-					tip.setText("µã»÷ĞŞ¸Ä°´Å¥±£´æĞŞ¸Ä");
+					tip.setText("ç‚¹å‡»ä¿®æ”¹æŒ‰é’®ä¿å­˜ä¿®æ”¹");
 				}
 			}
 		});
