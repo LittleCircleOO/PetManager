@@ -39,7 +39,7 @@ public class InTip extends JDialog {
 		getRootPane().setWindowDecorationStyle(JRootPane.WARNING_DIALOG);
 		
 		JLabel lbln = new JLabel("<html><body>\u5BFC\u5165\u6570\u636E\u540E\uFF0C\u539F\u6709\u6570\u636E\u4F1A\u88AB\u6E05\u7A7A\uFF0C<br>\u662F\u5426\u7EE7\u7EED\uFF1F<body></html>");
-		lbln.setFont(new Font("Àº‘¥∫⁄ÃÂ CN", Font.PLAIN, 12));
+		lbln.setFont(new Font("ÊÄùÊ∫êÈªë‰Ωì CN", Font.PLAIN, 12));
 		lbln.setIcon(new ImageIcon(InTip.class.getResource("/com/sun/javafx/scene/control/skin/caspian/dialog-warning.png")));
 		lbln.setBounds(10, 10, 264, 48);
 		contentPane.add(lbln);
@@ -47,17 +47,17 @@ public class InTip extends JDialog {
 		JButton button = new JButton("\u662F");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				/*«Âø’≤Ÿ◊˜*/
+				/*Ê∏ÖÁ©∫Êìç‰Ωú*/
 				int p,q;
 				for(p = 0; p < Gui.db.maxline; p++) {
 					for(q = 0; q < 4; q++) {
 						Gui.db.data[p][q]=null;
 					}
 				}
-				/*µº»Î≤Ÿ◊˜*/
+				/*ÂØºÂÖ•Êìç‰Ωú*/
 				BufferedReader br = null;
 				try {
-					br = new BufferedReader(new FileReader(selectedFile));//∂¡»°Œƒº˛
+					br = new BufferedReader(new FileReader(selectedFile));//ËØªÂèñÊñá‰ª∂
 				}catch(IOException e1){
 					e1.printStackTrace();
 				}
@@ -65,8 +65,8 @@ public class InTip extends JDialog {
 		            String line;
 		            String []sp = null;
 		            int count=0;
-		            while((line=br.readLine())!=null) {//∞¥––∂¡»°
-		                sp = line.split(" ");//∞¥ø’∏ÒΩ¯––∑÷∏Ó
+		            while((line=br.readLine())!=null) {//ÊåâË°åËØªÂèñ
+		                sp = line.split(" ");//ÊåâÁ©∫Ê†ºËøõË°åÂàÜÂâ≤
 		                for(int i=0;i<sp.length;i++){
 		                    Gui.db.data[count][i] = sp[i];
 		                }
@@ -76,9 +76,9 @@ public class InTip extends JDialog {
 		        } catch (IOException e2) {
 		            e2.printStackTrace();
 		        }
-		        /*Ã· æ*/
-		        JOptionPane.showMessageDialog(null, "µº»Î≥…π¶!");
-		        /*∏¸–¬±Ì∏Ò*/
+		        /*ÊèêÁ§∫*/
+		        JOptionPane.showMessageDialog(null, "ÂØºÂÖ•ÊàêÂäü!");
+		        /*Êõ¥Êñ∞Ë°®Ê†º*/
 		        gui.pettable.setModel(new DefaultTableModel(
 						Gui.db.data,
 						new String[] {
@@ -92,13 +92,13 @@ public class InTip extends JDialog {
 							return columnEditables[column];
 						}
 		        });
-		        /*ÕÀ≥ˆµº»ÎΩÁ√Ê*/
+		        /*ÈÄÄÂá∫ÂØºÂÖ•ÁïåÈù¢*/
 				ifo.dispose();
 				dispose();
 			}
 		});
 		button.setBackground(new Color(204, 255, 204));
-		button.setFont(new Font("Àº‘¥∫⁄ÃÂ CN", Font.PLAIN, 12));
+		button.setFont(new Font("ÊÄùÊ∫êÈªë‰Ωì CN", Font.PLAIN, 12));
 		button.setBounds(164, 64, 50, 27);
 		contentPane.add(button);
 		
@@ -110,7 +110,7 @@ public class InTip extends JDialog {
 			}
 		});
 		button_1.setBackground(new Color(255, 204, 204));
-		button_1.setFont(new Font("Àº‘¥∫⁄ÃÂ CN", Font.PLAIN, 12));
+		button_1.setFont(new Font("ÊÄùÊ∫êÈªë‰Ωì CN", Font.PLAIN, 12));
 		button_1.setBounds(224, 64, 50, 27);
 		contentPane.add(button_1);
 	}
