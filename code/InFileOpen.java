@@ -38,7 +38,7 @@ public class InFileOpen extends JDialog {
 		setResizable(false);
 		
 		JLabel label = new JLabel("\u6587\u4EF6\u8DEF\u5F84");
-		label.setFont(new Font("思源黑体 CN", Font.PLAIN, 12));
+		label.setFont(new Font("鎬濇簮榛戜綋 CN", Font.PLAIN, 12));
 		label.setBackground(new Color(255, 255, 255));
 		label.setBounds(20, 30, 48, 15);
 		contentPane.add(label);
@@ -46,7 +46,7 @@ public class InFileOpen extends JDialog {
 		textField = new JTextField();
 		textField.setForeground(Color.GRAY);
 		textField.setText("\u70B9\u51FB\u6D4F\u89C8\u6309\u94AE\uFF0C\u9009\u62E9\u6587\u4EF6");
-		textField.setFont(new Font("思源黑体 CN", Font.PLAIN, 12));
+		textField.setFont(new Font("鎬濇簮榛戜綋 CN", Font.PLAIN, 12));
 		textField.setEditable(false);
 		textField.setBounds(78, 27, 250, 21);
 		contentPane.add(textField);
@@ -63,7 +63,7 @@ public class InFileOpen extends JDialog {
 				}
 			}
 		});
-		applybutton.setFont(new Font("思源黑体 CN", Font.PLAIN, 12));
+		applybutton.setFont(new Font("鎬濇簮榛戜綋 CN", Font.PLAIN, 12));
 		applybutton.setEnabled(false);
 		applybutton.setBackground(new Color(204, 255, 204));
 		applybutton.setBounds(273, 82, 65, 23);
@@ -75,13 +75,13 @@ public class InFileOpen extends JDialog {
 				dispose();
 			}
 		});
-		cancelbutton.setFont(new Font("思源黑体 CN", Font.PLAIN, 12));
+		cancelbutton.setFont(new Font("鎬濇簮榛戜綋 CN", Font.PLAIN, 12));
 		cancelbutton.setBackground(new Color(255, 204, 204));
 		cancelbutton.setBounds(348, 82, 65, 23);
 		contentPane.add(cancelbutton);
 		
 		JFileChooser fileChooser = new JFileChooser();
-		FileFilter filter = new FileNameExtensionFilter("数据存储文件(.txt)","txt");
+		FileFilter filter = new FileNameExtensionFilter("鏁版嵁瀛樺偍鏂囦欢(.txt)","txt");
 		fileChooser.setFileFilter(filter);
 		
 		JButton filebutton = new JButton("\u6D4F\u89C8...");
@@ -95,12 +95,12 @@ public class InFileOpen extends JDialog {
 				}
 				else {
 					selectedFile = null;
-					textField.setText("点击浏览按钮，选择文件");
+					textField.setText("鐐瑰嚮娴忚鎸夐挳锛岄�夋嫨鏂囦欢");
 					applybutton.setEnabled(false);
 				}
 			}
 		});
-		filebutton.setFont(new Font("思源黑体 CN", Font.PLAIN, 12));
+		filebutton.setFont(new Font("鎬濇簮榛戜綋 CN", Font.PLAIN, 12));
 		filebutton.setBackground(new Color(255, 255, 255));
 		filebutton.setBounds(338, 26, 75, 23);
 		contentPane.add(filebutton);
