@@ -41,12 +41,12 @@ public class Exit extends JDialog {
 		getRootPane().setWindowDecorationStyle(JRootPane.INFORMATION_DIALOG);
 		
 		JLabel label = new JLabel("\u662F\u5426\u5C06\u66F4\u6539\u4FDD\u5B58\u5230\u6570\u636E\u6587\u4EF6\u4E2D\uFF1F");
-		label.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		label.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label.setIcon(new ImageIcon(Exit.class.getResource("/com/sun/javafx/scene/control/skin/caspian/dialog-information.png")));
 		label.setBounds(10, 10, 264, 48);
 		contentPane.add(label);
 		
-		JButton button_1 = new JButton("\u53D6\u6D88");            //È¡Ïû
+		JButton button_1 = new JButton("\u53D6\u6D88");            //å–æ¶ˆ
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -54,19 +54,19 @@ public class Exit extends JDialog {
 		});
 		
 		JFileChooser fileChooser = new JFileChooser();
-		FileFilter filter = new FileNameExtensionFilter("Êı¾İ´æ´¢ÎÄ¼ş(.txt)","txt");
+		FileFilter filter = new FileNameExtensionFilter("æ•°æ®å­˜å‚¨æ–‡ä»¶(.txt)","txt");
 		fileChooser.setFileFilter(filter);
 		
 		JButton button_2 = new JButton("\u4FDD\u5B58");
 		button_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {        //±£´æ
+			public void actionPerformed(ActionEvent arg0) {        //ä¿å­˜
 				int i = fileChooser.showSaveDialog(getContentPane());
 				File selectedFile = null;
 				if (i == JFileChooser.APPROVE_OPTION) {
 					
-					selectedFile = fileChooser.getSelectedFile();                 //ÎÄ¼şĞÍ±äÁ¿
-					String fname = selectedFile.getName();                        //»ñÈ¡ÎÄ¼şÃû
-					if(fname.indexOf(".txt")==-1){                                //×Ô¶¯À©Õ¹Ãû
+					selectedFile = fileChooser.getSelectedFile();                 //æ–‡ä»¶å‹å˜é‡
+					String fname = selectedFile.getName();                        //è·å–æ–‡ä»¶å
+					if(fname.indexOf(".txt")==-1){                                //è‡ªåŠ¨æ‰©å±•å
 						selectedFile=new File(fileChooser.getCurrentDirectory(),fname+".txt");
 					}
 					BufferedWriter bw = null;
@@ -100,23 +100,23 @@ public class Exit extends JDialog {
 				
 			}
 		});
-		button_2.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		button_2.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		button_2.setBackground(new Color(204, 255, 204));
 		button_2.setBounds(14, 64, 80, 27);
 		contentPane.add(button_2);
 		
-		JButton button = new JButton("\u4E0D\u4FDD\u5B58");       //²»±£´æ
+		JButton button = new JButton("\u4E0D\u4FDD\u5B58");       //ä¸ä¿å­˜
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
 		button.setBackground(new Color(255, 204, 204));
-		button.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		button.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		button.setBounds(104, 64, 80, 27);
 		contentPane.add(button);
 		button_1.setBackground(new Color(255, 255, 204));
-		button_1.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		button_1.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		button_1.setBounds(194, 64, 80, 27);
 		contentPane.add(button_1);
 	}
