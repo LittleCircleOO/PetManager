@@ -23,7 +23,7 @@ public class DelTip extends JDialog {
 	private JPanel contentPane;
 	private JTable table;
 
-	public DelTip(int selectedone,Gui gui) {                      //selectedone´ú±íÑ¡ÖĞĞĞµÄĞòºÅ,ÓÉÖ÷½çÃæ´«²Î´úÈë;guiÖĞº¬ÓĞ¾²Ì¬(static)Êı¾İ´æ´¢±ídb
+	public DelTip(int selectedone,Gui gui) {                      //selectedoneä»£è¡¨é€‰ä¸­è¡Œçš„åºå·,ç”±ä¸»ç•Œé¢ä¼ å‚ä»£å…¥;guiä¸­å«æœ‰é™æ€(static)æ•°æ®å­˜å‚¨è¡¨db
 		setTitle("\u5220\u9664\u786E\u8BA4");
 		setBackground(new Color(255, 255, 255));
 		setModal(true);
@@ -39,7 +39,7 @@ public class DelTip extends JDialog {
 		getRootPane().setWindowDecorationStyle(JRootPane.INFORMATION_DIALOG);
 		
 		JLabel label = new JLabel("\u786E\u8BA4\u5220\u9664\uFF1F");
-		label.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		label.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label.setIcon(new ImageIcon(DelTip.class.getResource("/com/sun/javafx/scene/control/skin/caspian/dialog-confirm.png")));
 		label.setBounds(10, 10, 264, 48);
 		contentPane.add(label);
@@ -54,7 +54,7 @@ public class DelTip extends JDialog {
 					Gui.db.data[i][3]=Gui.db.data[i+1][3];
 				}
 				Gui.db.thelast--;
-				JOptionPane.showMessageDialog(null, "É¾³ı³É¹¦!");
+				JOptionPane.showMessageDialog(null, "åˆ é™¤æˆåŠŸ!");
 				gui.pettable.setModel(new DefaultTableModel(
 						Gui.db.data,
 						new String[] {
@@ -72,7 +72,7 @@ public class DelTip extends JDialog {
 			}
 		});
 		ybutton.setBackground(new Color(204, 255, 204));
-		ybutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		ybutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		ybutton.setBounds(47, 64, 50, 27);
 		contentPane.add(ybutton);
 		
@@ -83,29 +83,29 @@ public class DelTip extends JDialog {
 			}
 		});
 		nbutton.setBackground(new Color(255, 204, 204));
-		nbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		nbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		nbutton.setBounds(107, 64, 50, 27);
 		contentPane.add(nbutton);
 		
-		JButton morebutton = new JButton("ÏêÏ¸ĞÅÏ¢¨‹");
+		JButton morebutton = new JButton("è¯¦ç»†ä¿¡æ¯â–¼");
 		morebutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(morebutton.getText()=="ÏêÏ¸ĞÅÏ¢¨‹") {
-					morebutton.setText("ÊÕÆğ¡ø");
+				if(morebutton.getText()=="è¯¦ç»†ä¿¡æ¯â–¼") {
+					morebutton.setText("æ”¶èµ·â–²");
 					setSize(300, 210);	
 				}else {
-					morebutton.setText("ÏêÏ¸ĞÅÏ¢¨‹");
+					morebutton.setText("è¯¦ç»†ä¿¡æ¯â–¼");
 					setSize(300, 140);
 				}
 			}
 		});
-		morebutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		morebutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		morebutton.setBackground(new Color(255, 255, 255));
 		morebutton.setBounds(167, 64, 106, 27);
 		contentPane.add(morebutton);
 		
 		JLabel label_1 = new JLabel("\u5220\u9664\u4FE1\u606F\u8BE6\u60C5");
-		label_1.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		label_1.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label_1.setBounds(10, 131, 72, 15);
 		contentPane.add(label_1);
 		
