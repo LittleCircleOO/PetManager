@@ -28,14 +28,14 @@ import javax.swing.JCheckBox;
 
 
 public class Find extends JDialog {
-	public static String type[]= {"<²»ÏŞÖÆ>","Ã¨","¹·","ÍÃ×Ó","²ÖÊó","<×Ô¶¨Òå>"};
-	public static String color[]= {"<²»ÏŞÖÆ>","°×É«","ºÚÉ«","ºìÉ«","³ÈÉ«","»ÆÉ«","ÂÌÉ«","ÇàÉ«","À¶É«","×ÏÉ«","×ØÉ«","»ÒÉ«","·ÛÉ«","<×Ô¶¨Òå>"};
+	public static String type[]= {"<ä¸é™åˆ¶>","çŒ«","ç‹—","å…”å­","ä»“é¼ ","<è‡ªå®šä¹‰>"};
+	public static String color[]= {"<ä¸é™åˆ¶>","ç™½è‰²","é»‘è‰²","çº¢è‰²","æ©™è‰²","é»„è‰²","ç»¿è‰²","é’è‰²","è“è‰²","ç´«è‰²","æ£•è‰²","ç°è‰²","ç²‰è‰²","<è‡ªå®šä¹‰>"};
 	private JPanel contentPane;
 	private JTextField nametext;
 	int num;
 	public Find(Gui gui) {
 		setBackground(Color.WHITE);
-		setTitle("²éÕÒ¡­");
+		setTitle("æŸ¥æ‰¾â€¦");
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setBounds(410, 285, 300, 310);
 		contentPane = new JPanel();
@@ -46,82 +46,82 @@ public class Find extends JDialog {
 		setResizable(false);
 		setModal(false);
 		
-		JLabel label1 = new JLabel("ÖÖÀàÉ¸Ñ¡");
-		label1.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel label1 = new JLabel("ç§ç±»ç­›é€‰");
+		label1.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label1.setBounds(10, 30, 48, 18);
 		contentPane.add(label1);
 		
 		JComboBox comboBox1 = new JComboBox(type);
-		comboBox1.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		comboBox1.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		comboBox1.setBackground(Color.WHITE);
 		comboBox1.setBounds(68, 27, 216, 24);
 		contentPane.add(comboBox1);
 		
-		JLabel label2 = new JLabel("ÑÕÉ«É¸Ñ¡");
-		label2.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel label2 = new JLabel("é¢œè‰²ç­›é€‰");
+		label2.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label2.setBounds(10, 80, 48, 18);
 		contentPane.add(label2);
 		
 		JComboBox comboBox2 = new JComboBox(color);
-		comboBox2.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		comboBox2.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		comboBox2.setBackground(Color.WHITE);
 		comboBox2.setBounds(68, 77, 216, 24);
 		contentPane.add(comboBox2);
 		
-		JLabel label3 = new JLabel("ÄêÁäÉ¸Ñ¡");
-		label3.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel label3 = new JLabel("å¹´é¾„ç­›é€‰");
+		label3.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label3.setBounds(10, 130, 48, 18);
 		contentPane.add(label3);
 		
-		JLabel from = new JLabel("×Ô");
-		from.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel from = new JLabel("è‡ª");
+		from.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		from.setBounds(75, 130, 12, 18);
 		contentPane.add(from);
 		
 		JSpinner fromnum = new JSpinner();
 		fromnum.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		fromnum.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		fromnum.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		fromnum.setBounds(97, 128, 40, 22);
 		contentPane.add(fromnum);
 		
-		JLabel to = new JLabel("ÖÁ");
-		to.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel to = new JLabel("è‡³");
+		to.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		to.setBounds(147, 130, 12, 18);
 		contentPane.add(to);
 		
 		JSpinner tonum = new JSpinner();
 		tonum.setModel(new SpinnerNumberModel(new Integer(0), new Integer(0), null, new Integer(1)));
-		tonum.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		tonum.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		tonum.setBounds(169, 128, 40, 22);
 		contentPane.add(tonum);
 		
 		JCheckBox agecheckBox = new JCheckBox("\u4E0D\u9650\u5236");
-		agecheckBox.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		agecheckBox.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		agecheckBox.setBackground(Color.WHITE);
 		agecheckBox.setBounds(219, 127, 65, 24);
 		contentPane.add(agecheckBox);
 		
-		JLabel label4 = new JLabel("ĞÕÃû²éÕÒ");
-		label4.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		JLabel label4 = new JLabel("å§“åæŸ¥æ‰¾");
+		label4.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		label4.setBounds(10, 180, 48, 18);
 		contentPane.add(label4);
 		
 		nametext = new JTextField();
 		nametext.setBackground(Color.WHITE);
-		nametext.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		nametext.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		nametext.setBounds(68, 177, 141, 24);
 		contentPane.add(nametext);
 		nametext.setColumns(10);
 		
 		JCheckBox namecheckBox = new JCheckBox("\u4E0D\u9650\u5236");
-		namecheckBox.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		namecheckBox.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		namecheckBox.setBackground(Color.WHITE);
 		namecheckBox.setBounds(219, 177, 65, 24);
 		contentPane.add(namecheckBox);
 		
-		JButton findbutton = new JButton("²éÕÒÏÂÒ»¸ö...");
+		JButton findbutton = new JButton("æŸ¥æ‰¾ä¸‹ä¸€ä¸ª...");
 		findbutton.setBackground(Color.WHITE);
-		findbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		findbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		findbutton.setBounds(97, 248, 112, 23);
 		contentPane.add(findbutton);
 		findbutton.addActionListener(new ActionListener() {
@@ -129,40 +129,40 @@ public class Find extends JDialog {
 				gui.pettable.setSelectionBackground(Color.YELLOW);
 				//gui.HighLight(gui.pettable, 0, false);
 				if((int)fromnum.getValue() > (int)tonum.getValue())
-					JOptionPane.showMessageDialog(null, "Çë¼ì²é²éÕÒÄêÁäµÄ´óĞ¡¹ØÏµ!", "×¢Òâ", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "è¯·æ£€æŸ¥æŸ¥æ‰¾å¹´é¾„çš„å¤§å°å…³ç³»!", "æ³¨æ„", JOptionPane.WARNING_MESSAGE);
 				else {
-					/*²éÕÒËã·¨*/
-					boolean btype = (comboBox1.getSelectedItem()=="<²»ÏŞÖÆ>");          //ÊÇ·ñ²»ÏŞÖÆ
-					boolean bcolor = (comboBox2.getSelectedItem()=="<²»ÏŞÖÆ>");
+					/*æŸ¥æ‰¾ç®—æ³•*/
+					boolean btype = (comboBox1.getSelectedItem()=="<ä¸é™åˆ¶>");          //æ˜¯å¦ä¸é™åˆ¶
+					boolean bcolor = (comboBox2.getSelectedItem()=="<ä¸é™åˆ¶>");
 					boolean bage = (agecheckBox.isSelected());
 					boolean bname = (namecheckBox.isSelected());
 					
 					/*for(int i = 0; i < gui.db.thelast; i++)
 						if(
-								(btype||gui.db.data[i][0].equals(comboBox1.getSelectedItem()))&               //ÀàĞÍÆ¥Åä
-								(bcolor||gui.db.data[i][2].equals(comboBox2.getSelectedItem()))&              //ÑÕÉ«Æ¥Åä
+								(btype||gui.db.data[i][0].equals(comboBox1.getSelectedItem()))&               //ç±»å‹åŒ¹é…
+								(bcolor||gui.db.data[i][2].equals(comboBox2.getSelectedItem()))&              //é¢œè‰²åŒ¹é…
 								(bage||(
-										(Integer.decode(gui.db.data[i][3])>=(int)fromnum.getValue())          //´óÓÚµÈÓÚ×îĞ¡Öµ
-										&(Integer.decode(gui.db.data[i][3])<=(int)tonum.getValue())           //Ğ¡ÓÚµÈÓÚ×î´óÖµ
+										(Integer.decode(gui.db.data[i][3])>=(int)fromnum.getValue())          //å¤§äºç­‰äºæœ€å°å€¼
+										&(Integer.decode(gui.db.data[i][3])<=(int)tonum.getValue())           //å°äºç­‰äºæœ€å¤§å€¼
 										))&
-								(bname||gui.db.data[i][1].contentEquals(nametext.getText()))                  //ĞÕÃûÆ¥Åä
+								(bname||gui.db.data[i][1].contentEquals(nametext.getText()))                  //å§“ååŒ¹é…
 								) {
-							/*¸ßÁÁ*/
+							/*é«˜äº®*/
 							//gui.HighLight(gui.pettable, i, true);}*/
-					if(gui.pettable.getSelectedRow()==-1)                     //ÅĞ¶ÏÊÇ·ñÑ¡ÖĞĞĞ
+					if(gui.pettable.getSelectedRow()==-1)                     //åˆ¤æ–­æ˜¯å¦é€‰ä¸­è¡Œ
 						num = 0;
 					else
 						num = gui.pettable.getSelectedRow()+1;
-					while(num <= gui.db.thelast) {                                //Ñ­»·±éÀú
+					while(num <= gui.db.thelast) {                                //å¾ªç¯éå†
 						if(
-								(num != gui.db.thelast)&&                                                       //Ä©Î²ÅĞ¶Ï
-								(btype||gui.db.data[num][0].equals(comboBox1.getSelectedItem()))&&               //ÀàĞÍÆ¥Åä
-								(bcolor||gui.db.data[num][2].equals(comboBox2.getSelectedItem()))&&              //ÑÕÉ«Æ¥Åä
+								(num != gui.db.thelast)&&                                                       //æœ«å°¾åˆ¤æ–­
+								(btype||gui.db.data[num][0].equals(comboBox1.getSelectedItem()))&&               //ç±»å‹åŒ¹é…
+								(bcolor||gui.db.data[num][2].equals(comboBox2.getSelectedItem()))&&              //é¢œè‰²åŒ¹é…
 								(bage||(
-										(Integer.decode(gui.db.data[num][3])>=(int)fromnum.getValue())          //´óÓÚµÈÓÚ×îĞ¡Öµ
-										&&(Integer.decode(gui.db.data[num][3])<=(int)tonum.getValue())           //Ğ¡ÓÚµÈÓÚ×î´óÖµ
+										(Integer.decode(gui.db.data[num][3])>=(int)fromnum.getValue())          //å¤§äºç­‰äºæœ€å°å€¼
+										&&(Integer.decode(gui.db.data[num][3])<=(int)tonum.getValue())           //å°äºç­‰äºæœ€å¤§å€¼
 										))&&
-								(bname||gui.db.data[num][1].contentEquals(nametext.getText()))) {                 //ĞÕÃûÆ¥Åä
+								(bname||gui.db.data[num][1].contentEquals(nametext.getText()))) {                 //å§“ååŒ¹é…
 							gui.pettable.setRowSelectionInterval(num,num);
 							num++;
 							break;
@@ -170,15 +170,15 @@ public class Find extends JDialog {
 								num++;
 							}
 					}
-					if(num > gui.db.thelast){                                                 //µ½´ï±í¸ñÄ©Î²
-						JOptionPane.showMessageDialog(null, "ÒÑµ½´ï±í¸ñÄ©Î²,ÔÙ´Îµã»÷½«´ÓÍ·¿ªÊ¼Ñ°ÕÒ");
+					if(num > gui.db.thelast){                                                 //åˆ°è¾¾è¡¨æ ¼æœ«å°¾
+						JOptionPane.showMessageDialog(null, "å·²åˆ°è¾¾è¡¨æ ¼æœ«å°¾,å†æ¬¡ç‚¹å‡»å°†ä»å¤´å¼€å§‹å¯»æ‰¾");
 						gui.pettable.clearSelection();
 					}
 				}
 			}
 		});
 		
-		JButton finishbutton = new JButton("Íê³É");
+		JButton finishbutton = new JButton("å®Œæˆ");
 		finishbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//gui.HighLight(gui.pettable, 0, false);
@@ -187,7 +187,7 @@ public class Find extends JDialog {
 			}
 		});
 		finishbutton.setBackground(Color.WHITE);
-		finishbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		finishbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		finishbutton.setBounds(219, 248, 65, 23);
 		contentPane.add(finishbutton);
 		
@@ -220,7 +220,7 @@ public class Find extends JDialog {
 		
 		comboBox1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(comboBox1.getSelectedItem()=="<×Ô¶¨Òå>")
+				if(comboBox1.getSelectedItem()=="<è‡ªå®šä¹‰>")
 					comboBox1.setEditable(true);
 				else
 					comboBox1.setEditable(false);
@@ -229,7 +229,7 @@ public class Find extends JDialog {
 		
 		comboBox2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(comboBox2.getSelectedItem()=="<×Ô¶¨Òå>")
+				if(comboBox2.getSelectedItem()=="<è‡ªå®šä¹‰>")
 					comboBox2.setEditable(true);
 				else
 					comboBox2.setEditable(false);
