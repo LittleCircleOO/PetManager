@@ -20,8 +20,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 
 public class Gui extends JFrame {
-	public static String type[]= {"ÇëÑ¡Ôñ...","Ã¨","¹·","ÍÃ×Ó","²ÖÊó","ÆäËû..."};
-	public static String color[]= {"ÇëÑ¡Ôñ...","°×É«","ºÚÉ«","ºìÉ«","³ÈÉ«","»ÆÉ«","ÂÌÉ«","ÇàÉ«","À¶É«","×ÏÉ«","×ØÉ«","»ÒÉ«","·ÛÉ«","ÆäËû..."};
+	public static String type[]= {"è¯·é€‰æ‹©...","çŒ«","ç‹—","å…”å­","ä»“é¼ ","å…¶ä»–..."};
+	public static String color[]= {"è¯·é€‰æ‹©...","ç™½è‰²","é»‘è‰²","çº¢è‰²","æ©™è‰²","é»„è‰²","ç»¿è‰²","é’è‰²","è“è‰²","ç´«è‰²","æ£•è‰²","ç°è‰²","ç²‰è‰²","å…¶ä»–..."};
 	public static DataBase db = new DataBase();
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -29,8 +29,8 @@ public class Gui extends JFrame {
 	public static Gui mainframe;
 	public static InFileOpen inframe;
 	public static OutFileOpen outframe;
-	/*¸ßÁÁËã·¨*/
-	/*public static void HighLight(JTable table, int line, boolean high) {          //table:±í¸ñ line:´ı¸ßÁÁµÄĞĞ high:ÊÇ·ñ¿ªÆô¸ßÁÁ
+	/*é«˜äº®ç®—æ³•*/
+	/*public static void HighLight(JTable table, int line, boolean high) {          //table:è¡¨æ ¼ line:å¾…é«˜äº®çš„è¡Œ high:æ˜¯å¦å¼€å¯é«˜äº®
 		try{
 			DefaultTableCellRenderer tcr = new DefaultTableCellRenderer(){
 				public Component getTableCellRendererComponent(JTable table,Object value, boolean isSelected, boolean hasFocus,int row, int column){
@@ -61,7 +61,7 @@ public class Gui extends JFrame {
 		}
 	}
 	
-	/*Éè¶¨±í¸ñ¸ßÁÁÄ³ĞĞ
+	/*è®¾å®šè¡¨æ ¼é«˜äº®æŸè¡Œ
 	public static void HighLight(int rowIndex) {
 		try {
 			DefaultTableCellRenderer tcr = new DefaultTableCellRenderer() {
@@ -87,7 +87,7 @@ public class Gui extends JFrame {
 	public Gui() {
 		
 		setBackground(new Color(255, 255, 255));
-		setTitle("³èÎïÉÌµêÊµÓÃ³ÌĞò");
+		setTitle("å® ç‰©å•†åº—å®ç”¨ç¨‹åº");
 		setBounds(710, 265, 500, 350);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
@@ -112,7 +112,7 @@ public class Gui extends JFrame {
 		contentPane.add(scrollPane);
 		
 		pettable = new JTable();
-		pettable.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		pettable.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		pettable.setBackground(Color.WHITE);
 		pettable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(pettable);
@@ -131,9 +131,9 @@ public class Gui extends JFrame {
 			}
 		});
 		
-		JButton addbutton = new JButton("Ìí¼Ó³èÎï");
+		JButton addbutton = new JButton("æ·»åŠ å® ç‰©");
 		addbutton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {                         //µ÷ÓÃÌí¼Ó´°¿Ú
+			public void actionPerformed(ActionEvent e) {                         //è°ƒç”¨æ·»åŠ çª—å£
 				try {
 					Add addframe = new Add(mainframe);
 					addframe.setVisible(true);
@@ -142,21 +142,21 @@ public class Gui extends JFrame {
 				}
 			}
 		});
-		addbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		addbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		addbutton.setBackground(new Color(204, 255, 204));
 		addbutton.setBounds(384, 13, 100, 23);
 		contentPane.add(addbutton);
 		
-		JButton delbutton = new JButton("É¾³ıÑ¡ÖĞ");
+		JButton delbutton = new JButton("åˆ é™¤é€‰ä¸­");
 		delbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(pettable.getSelectedRow() == -1)                     //ÊÇ·ñÑ¡ÖĞ
-					JOptionPane.showMessageDialog(null, "ÄúÃ»ÓĞÑ¡ÖĞÈÎºÎÒ»ĞĞ!");
+				if(pettable.getSelectedRow() == -1)                     //æ˜¯å¦é€‰ä¸­
+					JOptionPane.showMessageDialog(null, "æ‚¨æ²¡æœ‰é€‰ä¸­ä»»ä½•ä¸€è¡Œ!");
 				else {
-					if(pettable.getSelectedRow() >= db.thelast)                               //ÊÇ·ñÓĞÄÚÈİ
-						JOptionPane.showMessageDialog(null, "Ñ¡ÖĞĞĞÎŞĞÅÏ¢!");
+					if(pettable.getSelectedRow() >= db.thelast)                               //æ˜¯å¦æœ‰å†…å®¹
+						JOptionPane.showMessageDialog(null, "é€‰ä¸­è¡Œæ— ä¿¡æ¯!");
 					else {
-						/*É¾³ı²Ù×÷*/
+						/*åˆ é™¤æ“ä½œ*/
 						try {
 							DelTip dt = new DelTip(pettable.getSelectedRow(),mainframe);
 							dt.setVisible(true);
@@ -167,12 +167,12 @@ public class Gui extends JFrame {
 				}
 			}
 		});
-		delbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		delbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		delbutton.setBackground(new Color(255, 204, 204));
 		delbutton.setBounds(384, 46, 100, 23);
 		contentPane.add(delbutton);
 		
-		JButton inbutton = new JButton("µ¼ÈëÊı¾İ");
+		JButton inbutton = new JButton("å¯¼å…¥æ•°æ®");
 		inbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -184,16 +184,16 @@ public class Gui extends JFrame {
 			}
 		});
 		
-		JButton editbutton = new JButton("ĞŞ¸ÄÑ¡ÖĞ");
+		JButton editbutton = new JButton("ä¿®æ”¹é€‰ä¸­");
 		editbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(pettable.getSelectedRow() == -1)                     //ÊÇ·ñÑ¡ÖĞ
-					JOptionPane.showMessageDialog(null, "ÄúÃ»ÓĞÑ¡ÖĞÈÎºÎÒ»ĞĞ!");
+				if(pettable.getSelectedRow() == -1)                     //æ˜¯å¦é€‰ä¸­
+					JOptionPane.showMessageDialog(null, "æ‚¨æ²¡æœ‰é€‰ä¸­ä»»ä½•ä¸€è¡Œ!");
 				else {
-					if(pettable.getSelectedRow() >= db.thelast)                               //ÊÇ·ñÓĞÄÚÈİ
-						JOptionPane.showMessageDialog(null, "Ñ¡ÖĞĞĞÎŞĞÅÏ¢!");
+					if(pettable.getSelectedRow() >= db.thelast)                               //æ˜¯å¦æœ‰å†…å®¹
+						JOptionPane.showMessageDialog(null, "é€‰ä¸­è¡Œæ— ä¿¡æ¯!");
 					else {
-						/*ĞŞ¸Ä²Ù×÷*/
+						/*ä¿®æ”¹æ“ä½œ*/
 						try {
 							Edit ed = new Edit(mainframe, pettable.getSelectedRow());
 							ed.setVisible(true);
@@ -204,16 +204,16 @@ public class Gui extends JFrame {
 				}
 			}
 		});
-		editbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		editbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		editbutton.setBackground(new Color(255, 204, 153));
 		editbutton.setBounds(384, 79, 100, 23);
 		contentPane.add(editbutton);
-		inbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		inbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		inbutton.setBackground(new Color(204, 255, 255));
 		inbutton.setBounds(384, 112, 100, 23);
 		contentPane.add(inbutton);
 		
-		JButton outbutton = new JButton("µ¼³öÊı¾İ");
+		JButton outbutton = new JButton("å¯¼å‡ºæ•°æ®");
 		outbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -224,14 +224,14 @@ public class Gui extends JFrame {
 				}
 			}
 		});
-		outbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		outbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		outbutton.setBackground(new Color(255, 255, 204));
 		outbutton.setBounds(384, 145, 100, 23);
 		contentPane.add(outbutton);
 		
-		JButton exitbutton = new JButton("ÍË³ö³ÌĞò");
+		JButton exitbutton = new JButton("é€€å‡ºç¨‹åº");
 		exitbutton.setForeground(new Color(255, 255, 255));
-		exitbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN Medium", Font.PLAIN, 12));
+		exitbutton.setFont(new Font("æ€æºé»‘ä½“ CN Medium", Font.PLAIN, 12));
 		exitbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -244,7 +244,7 @@ public class Gui extends JFrame {
 		});
 		
 		JButton refreshbutton = new JButton("\u5237\u65B0\u5217\u8868");
-		refreshbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		refreshbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		refreshbutton.setBackground(new Color(204, 204, 255));
 		refreshbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -266,7 +266,7 @@ public class Gui extends JFrame {
 		refreshbutton.setBounds(384, 178, 100, 23);
 		contentPane.add(refreshbutton);
 		
-		JButton findbutton = new JButton("²éÕÒĞÅÏ¢");
+		JButton findbutton = new JButton("æŸ¥æ‰¾ä¿¡æ¯");
 		findbutton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
@@ -278,7 +278,7 @@ public class Gui extends JFrame {
 			}
 		});
 		
-		findbutton.setFont(new Font("Ë¼Ô´ºÚÌå CN", Font.PLAIN, 12));
+		findbutton.setFont(new Font("æ€æºé»‘ä½“ CN", Font.PLAIN, 12));
 		findbutton.setBackground(new Color(204, 255, 153));
 		findbutton.setBounds(384, 211, 100, 23);
 		contentPane.add(findbutton);
