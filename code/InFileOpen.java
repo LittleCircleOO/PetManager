@@ -1,4 +1,4 @@
-package store;
+package code;
 
 import javax.swing.JDialog;
 import javax.swing.JPanel;
