@@ -1,4 +1,4 @@
-package store;
+package code;
 
 public class DataBase {
 	public String[][] data;
